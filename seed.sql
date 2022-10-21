@@ -1,3 +1,4 @@
+-- Active: 1666287822290@@127.0.0.1@3306@StoreManager
 USE `StoreManager`;
 
 SET FOREIGN_KEY_CHECKS = 0;

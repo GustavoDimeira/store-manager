@@ -1,11 +1,11 @@
 const productModel = require('../models/productModel');
 
-const getAll = async () => productModel.getAll();
+const modelGetAll = async () => productModel.modelGetAll();
 
-const getById = async (id) => productModel.getById(id);
+const modelGetById = async (id) => productModel.modelGetById(id);
 
-const create = async (name) => productModel.create(name);
+const modelCreate = async (name) => productModel.modelCreate(name);
 
 module.exports = {
-  getAll, getById, create,
+  modelGetAll, modelGetById, modelCreate,
 };

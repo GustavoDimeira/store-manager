@@ -1,6 +1,6 @@
 const productService = require('../services/productService');
 
-const getAll = async (req, res) => {
+const controllerGetAll = async (req, res) => {
   const result = await productService.getAll();
   if (!result) {
     res.status(404).json({ message: 'Product not found' });
@@ -8,7 +8,7 @@ const getAll = async (req, res) => {
   res.status(200).json(result);
 };
 
-const getById = async (req, res) => {
+const controllerGetById = async (req, res) => {
   const { id } = req.params;
   const resultId = await productService.getById(id);
   if (!resultId) {
@@ -17,7 +17,7 @@ const getById = async (req, res) => {
   res.status(200).json(resultId);
 };
 
-const create = async (req, res) => {
+const controllerCreate = async (req, res) => {
   const { err } = await productService.create(req.body);
 
   if (err) {
@@ -26,5 +26,5 @@ const create = async (req, res) => {
 };
 
 module.exports = {
-  getAll, getById, create,
+  controllerGetAll, controllerGetById, controllerCreate,
 };
