@@ -3,4 +3,6 @@
 module.exports = {
   OK: 200,
   BadRequest: 400,
+  PageNotFound: 404,
+  Created: 201,
 };
